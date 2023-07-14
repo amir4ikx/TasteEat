@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+//ЦВЕТА
+$gold: #E1B168; // для button и для остольных жёлтых цветов!
+$gray: #555555; //для текстов
+$dark-gray: #292E36; // для секции с чёрным фоном
+
+
+//MИКСИНЫ
+// для текстов если леттер спейсинга нету поставить 0
+@mixin text ($f, $fs, $fw, $lh, $let) {
+    font-family: $f;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+    letter-spacing: $let;
+}
+
+// для flex
+@mixin flex ($jus, $ai) {
+    display: flex;
+    justify-content: $jus;
+    align-items: $ai;
+}
+
+// для grid сетки
+@mixin grid ($gtc, $gap) {
+    display: grid;
+    grid-template-columns: $gtc;
+    gap: $gap;
+}
+
+// ШАБЛОНЫ
+%btn {
+    position: relative;
+    padding: 20px 57px;
+    background: transparent;
+    border: 2px solid $btn-color;
+    @include text ('Josefin Sans', 22px, 400, 33px, 0.2px);
+    color: $btn-color;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: $btn-color;
+        z-index: -1;
+        transition: .5s;
+    }
+
+    &:hover::before {
+        width: 100%;
+
+    }
+
+    &:hover {
+        color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 15px $btn-color;
+    }
+
+    &:active::before {
+        background: black;
+    }
+}
