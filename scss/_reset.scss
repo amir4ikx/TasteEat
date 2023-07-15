@@ -127,3 +127,27 @@ $dark-gray: #292E36; // для секции с чёрным фоном
         color: black;
     }
 }
+
+@mixin section-name($w) {
+    @include text($dark-gray, "Josefin Sans", 15px, 400, 22.5px, 3px);
+
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        width: $w;
+        height: 1px;
+        background: $gold;
+    }
+}
+
+%section-title {
+    @include text($dark-gray, "Cormorant Infant", 40px, 400, 56px, 0);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+%section-subtitle {
+    @include text($gray, "Josefin Sans", 20px, 400, 30px, 0);
+    text-align: center;
+}
