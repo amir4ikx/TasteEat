@@ -7,14 +7,17 @@
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 img {
     max-width: 100%;
+    object-fit: cover;
 }
 
 html {
     scroll-behavior: smooth;
+    user-select: none;
 }
 
 //ЦВЕТА
@@ -46,15 +49,14 @@ $dark-gray: #292E36; // для секции с чёрным фоном
     grid-template-columns: $gtc;
     gap: $gap;
 }
-
 // ШАБЛОНЫ
 %btn {
     position: relative;
     padding: 20px 57px;
     background: transparent;
-    border: 2px solid $btn-color;
+    border: 2px solid $gold;
     @include text ('Josefin Sans', 22px, 400, 33px, 0.2px);
-    color: $btn-color;
+    color: $gold;
     cursor: pointer;
     z-index: 1;
     overflow: hidden;
@@ -66,7 +68,7 @@ $dark-gray: #292E36; // для секции с чёрным фоном
         left: 0;
         width: 0;
         height: 100%;
-        background: $btn-color;
+        background: $gold;
         z-index: -1;
         transition: .5s;
     }
@@ -79,10 +81,49 @@ $dark-gray: #292E36; // для секции с чёрным фоном
     &:hover {
         color: white;
         border-radius: 5px;
-        box-shadow: 0 0 15px $btn-color;
+        box-shadow: 0 0 15px $gold;
     }
 
     &:active::before {
         background: black;
+    }
+}
+%btn2 {
+    position: relative;
+    padding: 20px 87px;
+    border: 2px solid $gold;
+    background: $gold;
+    @include text ('Josefin Sans', 22px, 400, 33px, 0.2px);
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: $dark-gray;
+        z-index: -1;
+        transition: .5s;
+    }
+
+    &:hover::before {
+        width: 100%;
+
+    }
+
+    &:hover {
+        color: $gold;
+        border-radius: 5px;
+        box-shadow: 0 0 15px $gold;
+    }
+
+    &:active::before {
+        background: $gold;
+        color: black;
     }
 }
