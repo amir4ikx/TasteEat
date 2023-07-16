@@ -13,14 +13,14 @@ a {
 img {
   max-width: 100%;
   object-fit: cover;
+  user-select: none;
 }
 
 html {
   scroll-behavior: smooth;
-  user-select: none;
 }
 
-.header .header_first .call {
+.welcome .welcome_in .welcome_text button, .header .header_first .call {
   position: relative;
   padding: 20px 57px;
   background: transparent;
@@ -35,7 +35,7 @@ html {
   z-index: 1;
   overflow: hidden;
 }
-.header .header_first .call::before {
+.welcome .welcome_in .welcome_text button::before, .header .header_first .call::before {
   content: "";
   position: absolute;
   top: 0;
@@ -46,16 +46,16 @@ html {
   z-index: -1;
   transition: 0.5s;
 }
-.header .header_first .call:hover::before {
+.welcome .welcome_in .welcome_text button:hover::before, .header .header_first .call:hover::before {
   width: 100%;
 }
-.header .header_first .call:hover {
+.welcome .welcome_in .welcome_text button:hover, .header .header_first .call:hover {
   color: white;
   border-radius: 5px;
   box-shadow: 0 0 15px #E1B168;
 }
-.header .header_first .call:active::before {
-  background: black;
+.welcome .welcome_in .welcome_text button:active::before, .header .header_first .call:active::before {
+  background: transparent;
 }
 
 .header .header_first .reservation {
@@ -94,7 +94,40 @@ html {
 }
 .header .header_first .reservation:active::before {
   background: #E1B168;
-  color: black;
+}
+.header .header_first .reservation:active {
+  color: white;
+}
+
+.main .story, .main .about {
+  max-width: 100%;
+  background: #FFF8F5;
+}
+
+.main .story .story_in, .main .about .about_locate {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main .story .story_in .story_text .year .new h3, .main .story .story_in .story_text .year .old h3, .main .story .story_in .story_text .delicios h3 {
+  font-family: "Cormorant Infant";
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 56px;
+  letter-spacing: 0.2;
+  color: #292E36;
+  margin-bottom: 15px;
+}
+.main .story .story_in .story_text .year .new p, .main .story .story_in .story_text .year .old p, .main .story .story_in .story_text .delicios p {
+  font-family: "Josefin Sans";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+  color: #555555;
 }
 
 .header {
@@ -163,4 +196,99 @@ html {
 }
 .header .header_second .navbar .icons a:hover {
   opacity: 1;
+}
+
+.welcome {
+  max-width: 100%;
+  background: #292E36;
+  margin-top: 82px;
+  padding: 27px 0 0 0;
+}
+.welcome .welcome_in {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.welcome .welcome_in .welcome_text {
+  width: 630px;
+}
+.welcome .welcome_in .welcome_text h1 {
+  font-family: "Cormorant Infant";
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 110px;
+  letter-spacing: 0.2px;
+  color: white;
+}
+.welcome .welcome_in .welcome_text p {
+  font-family: "Josefin Sans";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+  color: white;
+  padding-top: 12px;
+}
+.welcome .welcome_in .welcome_text button {
+  padding: 0;
+  width: 230px;
+  height: 73px;
+  margin-top: 35px;
+}
+
+.main .about {
+  height: 243px;
+}
+.main .about .about_locate {
+  height: 243px;
+}
+.main .about .about_locate .locate_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .about .about_locate .locate_block img {
+  cursor: pointer;
+  transform: scale(1);
+  transition: 300ms;
+}
+.main .about .about_locate .locate_block img:hover {
+  transform: scale(1.1);
+}
+.main .about .about_locate .locate_block .locate_text {
+  margin-left: 20px;
+}
+.main .about .about_locate .locate_block .locate_text h3 {
+  font-family: "Cormorant Infant";
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 39px;
+  letter-spacing: 0.2;
+  color: #292E36;
+}
+.main .about .about_locate .locate_block .locate_text p {
+  font-family: "Josefin Sans";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+  color: #555555;
+}
+.main .story {
+  padding-top: 85px;
+  padding-bottom: 100px;
+}
+.main .story .story_in img {
+  margin-right: 45px;
+}
+.main .story .story_in .story_text .delicios {
+  margin-bottom: 25px;
+}
+.main .story .story_in .story_text .year {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
 }

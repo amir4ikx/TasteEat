@@ -13,11 +13,12 @@ a {
 img {
     max-width: 100%;
     object-fit: cover;
+    user-select: none;
 }
 
 html {
     scroll-behavior: smooth;
-    user-select: none;
+    
 }
 
 //ЦВЕТА
@@ -49,6 +50,7 @@ $dark-gray: #292E36; // для секции с чёрным фоном
     grid-template-columns: $gtc;
     gap: $gap;
 }
+
 // ШАБЛОНЫ
 %btn {
     position: relative;
@@ -85,7 +87,7 @@ $dark-gray: #292E36; // для секции с чёрным фоном
     }
 
     &:active::before {
-        background: black;
+        background: transparent;
     }
 }
 %btn2 {
@@ -124,13 +126,35 @@ $dark-gray: #292E36; // для секции с чёрным фоном
 
     &:active::before {
         background: $gold;
-        color: black;
+    }
+    &:active {
+        color: white;
     }
 }
-
+// prosto
+%davlat {
+    max-width: 100%;
+        background: #FFF8F5;
+}
+%davlat1 {
+    max-width: 1360px;
+            margin: 0 auto;
+            @include flex (space-between, center);
+}
+%txt {
+    h3 {
+        @include text ('Cormorant Infant', 40px, 400, 56px, 0.2);
+        color: $dark-gray;
+        margin-bottom: 15px;
+    }
+    p {
+        @include text ('Josefin Sans', 20px, 400, 30px, 0.2px);
+        color: $gray;
+    }
+}
 @mixin section-name($w) {
-    @include text($dark-gray, "Josefin Sans", 15px, 400, 22.5px, 3px);
-
+    @include text("Josefin Sans", 15px, 400, 22.5px, 3px);
+    color: $dark-gray;
     &::before,
     &::after {
         content: "";
@@ -142,12 +166,14 @@ $dark-gray: #292E36; // для секции с чёрным фоном
 }
 
 %section-title {
-    @include text($dark-gray, "Cormorant Infant", 40px, 400, 56px, 0);
+    @include text("Cormorant Infant", 40px, 400, 56px, 0);
+    color: $dark-gray;
     text-align: center;
     text-transform: capitalize;
 }
 
 %section-subtitle {
-    @include text($gray, "Josefin Sans", 20px, 400, 30px, 0);
+    @include text("Josefin Sans", 20px, 400, 30px, 0);
+    color: $gray;
     text-align: center;
 }
