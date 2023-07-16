@@ -1,3 +1,4 @@
+// Header
 .header {
     position: relative;
     height: 270px;
@@ -64,5 +65,100 @@
             }
         }
 
+    }
+}
+
+// Welcome
+.welcome {
+    max-width: 100%;
+    background: $dark-gray;
+    margin-top: 82px;
+    padding: 27px 0 0 0;
+    .welcome_in {
+        max-width: 1360px;
+        margin: 0 auto;
+        @include flex (space-between, center);
+        .welcome_text {
+            width: 630px;
+            h1 {
+                @include text ('Cormorant Infant', 100px, 400, 110px, 0.2px);
+                color: white;
+
+            }
+            p {
+                @include text ('Josefin Sans', 20px, 400, 30px, 0.2px);
+                color: white;
+                padding-top: 12px;
+            }
+            button {
+                @extend %btn;
+                padding: 0;
+                width: 230px;
+                height: 73px;
+                margin-top: 35px;
+            }
+        }
+    }
+}
+
+.main {
+    // About
+    .about {
+        @extend %davlat;
+        height: 243px;
+        .about_locate {
+            @extend %davlat1;
+            height: 243px;
+            .locate_block {
+                @include flex (space-between, center);
+                img {
+                    cursor: pointer;
+                    transform: scale(1);
+                    transition: 300ms;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+                .locate_text {
+                    margin-left: 20px;
+                    h3 {
+                        @include text ('Cormorant Infant', 30px, 400, 39px, 0.2);
+                        color: $dark-gray;
+                    }
+                    p {
+                        @include text ('Josefin Sans', 20px, 400, 30px, 0.2px);
+                        color: $gray;
+                    }
+                }
+            }
+        }
+    }
+    // Story
+    .story {
+        @extend %davlat;
+        padding-top: 85px;
+        padding-bottom: 100px;
+        .story_in {
+            @extend %davlat1;
+            img {
+                margin-right: 45px;
+            }
+            .story_text {
+                .delicios {
+                    @extend %txt;
+                    margin-bottom: 25px;
+                }
+                .year {
+                    @include flex (space-between, center);
+                    margin-bottom: 25px;
+                    .old {
+                       @extend %txt; 
+                    }
+                    .new {
+                        @extend %txt; 
+                    }
+                }
+            }
+        }
     }
 }
