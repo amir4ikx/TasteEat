@@ -1,0 +1,227 @@
+.offers {
+    padding: 203px 20px 21px;
+
+    &__heading {
+        @include flex(center, center);
+        flex-direction: column;
+        gap: 8px;
+
+        &-name {
+            @include section-name(78px, $gold);
+        }
+
+        &-title {
+            @extend %section-title;
+        }
+
+        &-subtitle {
+            @extend %section-subtitle;
+            margin-top: 4px;
+            max-width: 813px;
+        }
+    }
+
+    &__food {
+        @include grid(1fr 1fr, 20px);
+        margin: 40px auto 0;
+
+        &-card {
+            @include grid(1fr 1fr, auto);
+            padding: 67px 40px 40px;
+        }
+
+        &-content {
+            max-width: 254px;
+        }
+
+        &-price {
+            max-width: 167px;
+            height: 104px;
+            text-align: center;
+            @include text(Cormorant Infant, 60px, 400, 66px, 0.2px);
+
+            span {
+                @include text(Josefin Sans, 15px, 400, 10.5px, 0.15px);
+                color: $dark-gray;
+                text-transform: uppercase;
+                display: block;
+            }
+        }
+
+        #offers__food-price2 {
+            color: white;
+
+            span {
+                color: white;
+            }
+        }
+
+        &-name {
+            @include section-name(212.5px, $gray);
+            margin-top: 39px;
+        }
+
+        &-title {
+            @include text(Cormorant Infant, 40px, 400, 56px, 0.2px);
+            text-transform: capitalize;
+            margin-top: 8px;
+        }
+
+        &-subtitle {
+            @include text(Josefin Sans, 20px, 400, 30px, 0.2px);
+            margin-top: 5px;
+        }
+    }
+}
+
+#offers__food-card1{
+    background-image: url(../img/offers/offers-bg-1.png);
+    @extend %bg-position;
+}
+#offers__food-card2{
+    background-image: url(../img/offers/offers-bg-2.png);
+    @extend %bg-position;
+}
+#offers__food-price1{
+    background-image: url(../img/offers/offers-price-1.svg);
+    @extend %bg-position;
+}
+
+#offers__food-price2{
+    background-image: url(../img/offers/offers-price-2.svg);
+    @extend %bg-position;
+}
+
+@media (max-width:1200px) {
+    .offers {
+        padding-top: 130px;
+        place-content: center;
+
+        &__food {
+
+            &-card {
+                position: relative;
+            }
+
+            &-name::before,
+            &-name::after {
+                max-width: 164px;
+            }
+
+            &-content {
+                z-index: 2;
+                margin: 0 auto;
+            }
+
+            &-img {
+                opacity: .7;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                position: absolute;
+            }
+
+            &-name {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .offers {
+        &__heading {
+            &-title {
+                font-size: 38px;
+                line-height: 40px;
+            }
+
+            &-subtitle {
+                margin-top: 0;
+                font-size: 18px;
+            }
+        }
+
+        &__food {
+            &-price {
+                font-size: 50px;
+            }
+
+            &-name {
+                letter-spacing: 2px;
+                font-size: 12px;
+
+                &::before,
+                &::after {
+                    width: 130px;
+                }
+            }
+
+
+            &-title {
+                margin: 0;
+            }
+
+            &-subtitle {
+                margin: 0;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+    }
+
+    #offers__food-price1,
+    #offers__food-price2 {
+        background-size: 150px;
+    }
+}
+
+@media (max-width:768px) {
+    .offers {
+        padding-top: 100px;
+
+        &__food {
+            margin-top: 30px;
+
+            &-card {
+                padding-top: 40px;
+            }
+
+            &-title {
+                line-height: 40px;
+                margin-top: 8px;
+            }
+
+            &-subtitle {
+                margin-top: 5px;
+                font-size: 15px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .offers {
+        padding-top: 60px;
+
+        &__heading-subtitle {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        &__food {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+
+            &-card {
+                padding-left: 25px;
+                grid-template-columns: 1fr 1px;
+            }
+
+            &-img{
+                height: 180px;
+            }
+        }
+    }
+}

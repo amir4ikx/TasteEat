@@ -1,0 +1,133 @@
+.services {
+    padding: 146px 20px 140px;
+    background-color: $dark-gray;
+
+    .container {
+        @include flex(space-between, center);
+    }
+
+    &__heading {
+        max-width: 448px;
+
+        &-name {
+            @include section-name(172px, $gold);
+            color: #fff
+        }
+
+        &-title {
+            @extend %section-title;
+            color: #fff;
+            text-align: start;
+        }
+
+        &-subtitle {
+            @extend %section-subtitle;
+            color: #fff;
+            text-align: start;
+        }
+    }
+
+    &__cards {
+        @include grid(1fr 1fr 1fr, 30px);
+
+        &-card {
+            border: 20px solid $gray;
+            @include flex(center, center);
+            gap: 15px;
+            flex-direction: column;
+            height: 235px;
+            width: 254px;
+        }
+
+        &-subtitle {
+            @include text(Cormorant Infant, 25px, 400, 35px, 0.2px);
+            color: #fff;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .services__cards-card {
+        height: 211.5px;
+        width: 228.6px;
+    }
+
+    .services__cards-img {
+        height: 45px;
+    }
+
+    .services__cards-subtitle {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .services__heading {
+        max-width: 310px;
+    }
+}
+
+@media (max-width:1200px) {
+    .services{
+        .container{
+            flex-direction: column;
+        }
+        .services__heading{
+            max-width: 448px;
+            @include flex(center, center);
+            flex-direction: column;
+            gap: 8px;
+            &-subtitle{
+                text-align: center;
+            }
+        }
+        .services__cards{
+            margin-top: 25px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .services{
+        padding: 125px 20px 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services__cards{
+        gap: 10px;
+    }
+    .services__cards-card{
+        width: 165.1px;
+        height: 152.75px;
+        border: 16px solid $gray;
+    }
+    .services__cards-img{
+        height: 40px;
+    }
+    .services__cards-subtitle{
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .services__heading-title{
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .services__heading-subtitle {
+        font-size: 17px;
+        line-height: 25px;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .services{
+        padding: 100px 20px 85px;
+    }
+    .services__cards{
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+    .services__heading-title{
+        text-align: center;
+    }
+}

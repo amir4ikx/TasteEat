@@ -128,8 +128,8 @@ $dark-gray: #292E36; // для секции с чёрным фоном
     }
 }
 
-@mixin section-name($w) {
-    @include text($dark-gray, "Josefin Sans", 15px, 400, 22.5px, 3px);
+@mixin section-name($w, $bg) {
+    @include text("Josefin Sans", 15px, 400, 22.5px, 3px);
 
     &::before,
     &::after {
@@ -142,12 +142,24 @@ $dark-gray: #292E36; // для секции с чёрным фоном
 }
 
 %section-title {
-    @include text($dark-gray, "Cormorant Infant", 40px, 400, 56px, 0);
+    @include text("Cormorant Infant", 40px, 400, 56px, 0);
     text-align: center;
     text-transform: capitalize;
 }
 
 %section-subtitle {
-    @include text($gray, "Josefin Sans", 20px, 400, 30px, 0);
+    @include text("Josefin Sans", 20px, 400, 30px, 0);
     text-align: center;
+}
+
+%bg-position{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
