@@ -1,0 +1,245 @@
+.book {
+    .container {
+        padding: 140px 260px;
+        background-image: url(../img/book/book-bg.png);
+        @extend %bg-position;
+        display: grid;
+        place-content: center;
+    }
+
+    &__form-wrap {
+        padding: 140px 140px 140px 155px;
+        background-color: rgba($dark-gray, 95%);
+    }
+
+    .form__heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__form-name {
+        @include section-name(138px, $gold);
+        color: #FFF;
+    }
+
+    &__form-title {
+        @include text(Cormorant Infant, 40px, 400, 56px, 0.2px);
+        color: #FFF;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .form__inputs {
+        margin-top: 38px;
+        display: grid;
+        grid-template-columns: repeat(6, 141px);
+        grid-template-rows: repeat(2, 70px);
+        gap: 25px;
+        grid-template-areas:
+            "name1 name1 name1 email email email"
+            "select select timing timing date date";
+    }
+
+    .form__input {
+
+        input,
+        select {
+            outline: none;
+            background: transparent;
+            border: 1px solid #858585;
+            @include text(Josefin Sans, 22px, 400, 33px, 0.2px);
+            color: #FFF;
+            padding: 22px 19px;
+        }
+
+        &-name {
+            grid-area: name1;
+
+        }
+
+        &-email {
+            grid-area: email;
+        }
+
+        &-select {
+            grid-area: select;
+            appearance: none;
+        }
+
+        &-time {
+            grid-area: timing;
+        }
+
+        &-date {
+            grid-area: date;
+        }
+    }
+
+    &__form-btn {
+        padding: 23px 54px;
+        background-color: #FFF;
+        margin: 30px auto 0;
+        display: block;
+        cursor: pointer;
+
+        @include text(Josefin Sans, 22px, 400, 33px, 0.2px);
+        text-transform: capitalize;
+        color: #000;
+        text-align: center;
+        transition: .2s;
+
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: $dark-gray;
+            z-index: -1;
+            transition: .5s;
+        }
+
+        &:hover::before {
+            width: 100%;
+        }
+
+        &:hover {
+            color: white;
+            box-shadow: 0 0 15px white;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+}
+
+.select-option {
+    color: #000;
+    background-color: transparent;
+    box-sizing: content-box;
+    padding: 10px;
+}
+
+@media (max-width: 1400px) {
+    .book__form-wrap {
+        padding: 140px 80px 140px 80px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .book {
+        .form__inputs {
+            grid-template-columns: repeat(6, 125px);
+            grid-template-rows: repeat(2, 65px);
+            gap: 22px;
+        }
+
+        .form__input select {
+            padding: 15px 19px;
+        }
+
+        &__form-wrap {
+            padding: 115px 50px 115px 50px;
+        }
+
+        .container {
+            padding: 130px 0;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .book {
+        .form__inputs {
+            grid-template-columns: repeat(6, 80px);
+            grid-template-rows: repeat(2, 60px);
+            gap: 17px;
+        }
+
+        .form__input input,
+        .form__input select {
+            font-size: 18px;
+        }
+
+        &__form-btn {
+            padding: 15px 37px;
+            font-size: 18px;
+        }
+
+        &__form-wrap {
+            padding: 55px 50px;
+        }
+
+        .container {
+            padding: 100px 0;
+        }
+
+        &__form-name {
+            font-size: 12px;
+        }
+
+        &__form-title {
+            font-size: 37px;
+        }
+
+        &__form-name::before,
+        &__form-name::after {
+            width: 116px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .book {
+        .form__inputs {
+            grid-template-columns: repeat(6, 55px);
+            grid-template-rows: repeat(2, 45px);
+            gap: 14px;
+            margin-top: 20px;
+        }
+
+        .form__input input,
+        .form__input select {
+            font-size: 14px;
+        }
+
+        .form__input select {
+            padding: 0 15px;
+        }
+
+        &__form-btn {
+            padding: 9px 27px;
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .book .form__inputs {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .book .form__input input,
+    .book .form__input select {
+        padding: 0 20px;
+        width: 100%;
+    }
+    .book__form-title{
+        font-size: 35px;
+        line-height: 50px;
+    }
+    .book__form-btn {
+        padding: 6px 19px;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+}

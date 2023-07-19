@@ -199,6 +199,120 @@ html {
   opacity: 1;
 }
 
+.footer {
+  background-color: #292E36;
+  padding: 100px 0 25px;
+}
+.footer__row-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.footer__hashtag {
+  font-family: Josefin Sans;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0.2px;
+  color: #FFF;
+}
+.footer__social {
+  display: grid;
+  grid-template-columns: repeat(4, 44px);
+  grid-template-rows: repeat(4, 23px);
+}
+.footer__social-img-1 {
+  grid-column: 4;
+  grid-row: 1;
+}
+.footer__social-img-2 {
+  grid-column: 1;
+  grid-row: 2;
+}
+.footer__social-img-3 {
+  grid-column: 2;
+  grid-row: 3;
+}
+.footer__social-img-4 {
+  grid-column: 3;
+  grid-row: 4;
+}
+.footer__title {
+  font-family: Josefin Sans;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+  color: #fff;
+  text-align: center;
+  margin-top: 40px;
+}
+.footer__row-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__contact-name {
+  font-family: "Josefin Sans";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22.5px;
+  letter-spacing: 3px;
+  color: #fff;
+  margin-bottom: 34px;
+}
+.footer__contact-name::before, .footer__contact-name::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 1px;
+  background: #E1B168;
+}
+.footer__contact-name::before {
+  margin-bottom: 4px;
+}
+.footer-white, .footer-gold {
+  font-family: Josefin Sans;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+}
+.footer-white {
+  color: #fff;
+}
+.footer-gold {
+  color: #E1B168;
+}
+.footer__hours-name {
+  font-family: "Josefin Sans";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22.5px;
+  letter-spacing: 3px;
+  color: #fff;
+  margin-bottom: 34px;
+}
+.footer__hours-name::before, .footer__hours-name::after {
+  content: "";
+  display: block;
+  width: 172px;
+  height: 1px;
+  background: #E1B168;
+}
+.footer__hours-name::before {
+  margin-bottom: 4px;
+}
+.footer__hours-name::before, .footer__hours-name::after {
+  margin-left: auto;
+}
+.footer #left {
+  text-align: left;
+}
+.footer #right {
+  text-align: right;
+}
+
 .offers {
   padding: 203px 20px 21px;
 }
@@ -222,6 +336,9 @@ html {
   width: 78px;
   height: 1px;
   background: #E1B168;
+}
+.offers__heading-name::before {
+  margin-bottom: 4px;
 }
 .offers__heading-subtitle {
   margin-top: 4px;
@@ -282,6 +399,9 @@ html {
   width: 212.5px;
   height: 1px;
   background: #E1B168;
+}
+.offers__food-name::before {
+  margin-bottom: 4px;
 }
 .offers__food-title {
   font-family: Cormorant Infant;
@@ -438,6 +558,9 @@ html {
   height: 1px;
   background: #E1B168;
 }
+.menu__heading-name::before {
+  margin-bottom: 4px;
+}
 .menu__heading-subtitle {
   max-width: 760px;
 }
@@ -550,6 +673,9 @@ html {
   width: 172px;
   height: 1px;
   background: #E1B168;
+}
+.services__heading-name::before {
+  margin-bottom: 4px;
 }
 .services__heading-title {
   color: #fff;
@@ -685,6 +811,9 @@ html {
   height: 1px;
   background: #E1B168;
 }
+.blog__heading-name::before {
+  margin-bottom: 4px;
+}
 .blog__cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -732,6 +861,9 @@ html {
   height: 1px;
   background: #E1B168;
 }
+.blog__cards .blog__cards-span1::before {
+  margin-bottom: 4px;
+}
 .blog__cards .blog__cards-span2 {
   font-family: "Josefin Sans";
   font-size: 15px;
@@ -745,6 +877,9 @@ html {
   width: 165px;
   height: 1px;
   background: #E1B168;
+}
+.blog__cards .blog__cards-span2::before {
+  margin-bottom: 4px;
 }
 .blog__cards-title {
   font-family: Cormorant Infant;
@@ -818,7 +953,7 @@ html {
 }
 .book .container {
   padding: 140px 260px;
-  background-image: url(../img/reservation/reservation-bg.png);
+  background-image: url(../img/book/book-bg.png);
   display: grid;
   place-content: center;
 }
@@ -843,9 +978,12 @@ html {
 .book__form-name::before, .book__form-name::after {
   content: "";
   display: block;
-  width: 143px;
+  width: 138px;
   height: 1px;
   background: #E1B168;
+}
+.book__form-name::before {
+  margin-bottom: 4px;
 }
 .book__form-title {
   font-family: Cormorant Infant;
@@ -857,7 +995,7 @@ html {
   text-align: center;
   text-transform: capitalize;
 }
-.book .form__input {
+.book .form__inputs {
   margin-top: 38px;
   display: grid;
   grid-template-columns: repeat(6, 141px);
@@ -865,8 +1003,8 @@ html {
   gap: 25px;
   grid-template-areas: "name1 name1 name1 email email email" "select select timing timing date date";
 }
-.book .form__input-name {
-  grid-area: name1;
+.book .form__input input,
+.book .form__input select {
   outline: none;
   background: transparent;
   border: 1px solid #858585;
@@ -878,53 +1016,23 @@ html {
   color: #FFF;
   padding: 22px 19px;
 }
+.book .form__input-name {
+  grid-area: name1;
+}
 .book .form__input-email {
   grid-area: email;
-  background: transparent;
-  border: 1px solid #858585;
-  font-family: Josefin Sans;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 33px;
-  letter-spacing: 0.2px;
-  color: #FFF;
-  padding: 22px 19px;
 }
 .book .form__input-select {
   grid-area: select;
-  background: transparent;
-  border: 1px solid #858585;
-  font-family: Josefin Sans;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 33px;
-  letter-spacing: 0.2px;
-  color: #FFF;
-  padding: 22px 19px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .book .form__input-time {
   grid-area: timing;
-  background: transparent;
-  border: 1px solid #858585;
-  font-family: Josefin Sans;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 33px;
-  letter-spacing: 0.2px;
-  color: #FFF;
-  padding: 22px 19px;
 }
 .book .form__input-date {
   grid-area: date;
-  background: transparent;
-  border: 1px solid #858585;
-  font-family: Josefin Sans;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 33px;
-  letter-spacing: 0.2px;
-  color: #FFF;
-  padding: 22px 19px;
 }
 .book__form-btn {
   padding: 23px 54px;
@@ -940,7 +1048,7 @@ html {
   text-transform: capitalize;
   color: #000;
   text-align: center;
-  transition: 0.5s;
+  transition: 0.2s;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -965,4 +1073,215 @@ html {
 }
 .book__form-btn:active {
   transform: translateY(2px);
+}
+
+.select-option {
+  color: #000;
+  background-color: transparent;
+  box-sizing: content-box;
+  padding: 10px;
+}
+
+@media (max-width: 1400px) {
+  .book__form-wrap {
+    padding: 140px 80px 140px 80px;
+  }
+}
+@media (max-width: 1200px) {
+  .book .form__inputs {
+    grid-template-columns: repeat(6, 125px);
+    grid-template-rows: repeat(2, 65px);
+    gap: 22px;
+  }
+  .book .form__input select {
+    padding: 15px 19px;
+  }
+  .book__form-wrap {
+    padding: 115px 50px 115px 50px;
+  }
+  .book .container {
+    padding: 130px 0;
+  }
+}
+@media (max-width: 992px) {
+  .book .form__inputs {
+    grid-template-columns: repeat(6, 80px);
+    grid-template-rows: repeat(2, 60px);
+    gap: 17px;
+  }
+  .book .form__input input,
+  .book .form__input select {
+    font-size: 18px;
+  }
+  .book__form-btn {
+    padding: 15px 37px;
+    font-size: 18px;
+  }
+  .book__form-wrap {
+    padding: 55px 50px;
+  }
+  .book .container {
+    padding: 100px 0;
+  }
+  .book__form-name {
+    font-size: 12px;
+  }
+  .book__form-title {
+    font-size: 37px;
+  }
+  .book__form-name::before, .book__form-name::after {
+    width: 116px;
+  }
+}
+@media (max-width: 768px) {
+  .book .form__inputs {
+    grid-template-columns: repeat(6, 55px);
+    grid-template-rows: repeat(2, 45px);
+    gap: 14px;
+    margin-top: 20px;
+  }
+  .book .form__input input,
+  .book .form__input select {
+    font-size: 14px;
+  }
+  .book .form__input select {
+    padding: 0 15px;
+  }
+  .book__form-btn {
+    padding: 9px 27px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 576px) {
+  .book .form__inputs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .book .form__input input,
+  .book .form__input select {
+    padding: 0 20px;
+    width: 100%;
+  }
+  .book__form-title {
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .book__form-btn {
+    padding: 6px 19px;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+}
+.footer {
+  background-color: #292E36;
+  padding: 100px 0 25px;
+}
+.footer__row-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.footer__hashtag {
+  font-family: Josefin Sans;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0.2px;
+  color: #FFF;
+}
+.footer__social {
+  display: grid;
+  grid-template-columns: repeat(4, 44px);
+  grid-template-rows: repeat(4, 23px);
+}
+.footer__social-img-1 {
+  grid-column: 4;
+  grid-row: 1;
+}
+.footer__social-img-2 {
+  grid-column: 1;
+  grid-row: 2;
+}
+.footer__social-img-3 {
+  grid-column: 2;
+  grid-row: 3;
+}
+.footer__social-img-4 {
+  grid-column: 3;
+  grid-row: 4;
+}
+.footer__title {
+  font-family: Josefin Sans;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+  color: #fff;
+  text-align: center;
+  margin-top: 40px;
+}
+.footer__row-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__contact-name {
+  font-family: "Josefin Sans";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22.5px;
+  letter-spacing: 3px;
+  color: #fff;
+  margin-bottom: 34px;
+}
+.footer__contact-name::before, .footer__contact-name::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 1px;
+  background: #E1B168;
+}
+.footer__contact-name::before {
+  margin-bottom: 4px;
+}
+.footer-white, .footer-gold {
+  font-family: Josefin Sans;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+}
+.footer-white {
+  color: #fff;
+}
+.footer-gold {
+  color: #E1B168;
+}
+.footer__hours-name {
+  font-family: "Josefin Sans";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22.5px;
+  letter-spacing: 3px;
+  color: #fff;
+  margin-bottom: 34px;
+}
+.footer__hours-name::before, .footer__hours-name::after {
+  content: "";
+  display: block;
+  width: 172px;
+  height: 1px;
+  background: #E1B168;
+}
+.footer__hours-name::before {
+  margin-bottom: 4px;
+}
+.footer__hours-name::before, .footer__hours-name::after {
+  margin-left: auto;
+}
+.footer #left {
+  text-align: left;
+}
+.footer #right {
+  text-align: right;
 }

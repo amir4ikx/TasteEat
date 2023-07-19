@@ -198,22 +198,57 @@
                         <h4 class="book__form-title">Book Your Table</h4>
                     </div>
                     <form class="form__input" name="form">
-                        <input class="form__input-name" type="text" placeholder="Name" required>
-                        <input class="form__input-email" type="email" placeholder="Email" required>
-                        <select class="form__input-select">
-                            <option value="1">Person</option>
-                            <option value="2">2 Persons</option>
-                            <option value="3">3 Persons</option>
-                            <option value="more">More</option>
-                        </select>
-                        <input class="form__input-time" type="time" value="23:59">
-                        <input class="form__input-date" type="date">
+                        <div class="form__inputs">
+                            <input class="form__input-name" type="text" placeholder="Name" required>
+                            <input class="form__input-email" type="email" placeholder="Email" required>
+                            <select class="form__input-select">
+                                <option class="select-option" value="1">Person</option>
+                                <option class="select-option" value="2">2 Persons</option>
+                                <option class="select-option" value="3">3 Persons</option>
+                                <option class="select-option" value="more">More</option>
+                            </select>
+                            <input class="form__input-time" required type="text" value="Timing" onfocus="(this.type='time')" onblur="if(!this.value) this.type='text'">
+                            <input class="form__input-date" required type="text" value="Date" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
+                        </div>
+                        <button class="book__form-btn" type="submit">book a table</button>
                     </form>
-                    <button class="book__form-btn" type="submit">book a table</button>
                 </div>
             </div>
         </section>
     </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__row-1">
+                <h4 class="footer__hashtag">#TheTastEat</h4>
+                <img class="footer__logo" src="././img/footer/logo.svg" alt="logo">
+                <div class="footer__social">
+                    <a class="footer__social-img-1" href="#!"><img src="././img/footer/twitter.svg" alt="twitter"></a>
+                    <a class="footer__social-img-2" href="#!"><img src="././img/footer/instagram.svg" alt="instagram"></a>
+                    <a class="footer__social-img-3" href="#!"><img src="././img/footer/facebook.svg" alt="facebook"></a>
+                    <a class="footer__social-img-4" href="#!"><img src="././img/footer/pinterest.svg" alt="pinterest"></a>
+                </div>
+            </div>
+            <h6 class="footer__title">Join our mailing list for updates,<br>Get news & offers events.</h6>
+            <div class="footer__row-2"> 
+                <div class="footer__contact">
+                    <h6 class="footer__contact-name" id="left">CONTACT</h6>
+                    <p class="footer-white" id="left">5 Rue Dalou, 75015 Paris</p>
+                    <a class="footer-gold" id="left" href="tel:+123456789">+123 456 789</a>
+                    <a class="footer-gold" id="left" href="mailto:josefin@mail.com" style="display: block;">josefin@mail.com</a>
+                </div>
+                <form class="footer__form">
+                    <input class="footer__form-email" type="email" placeholder="Email" required>
+                    <button class="footer__form-btn" type="submit">Subscribe</button>
+                </form>
+                <div class="footer__hours">
+                    <h6 class="footer__hours-name" id="right">WORKING HOURS</h6>
+                    <p class="footer-gold" id="right">Mon - Fri: <span class="footer-white">7.00am : 6.00pm</span></p>
+                    <p class="footer-gold" id="right">Sat: <span class="footer-white">7.00am : 6.00pm</span></p>
+                    <p class="footer-gold" id="right">Sun: <span class="footer-white">8.00am : 6.00pm</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="./js/script.js"></script>
 </body>

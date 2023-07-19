@@ -139,6 +139,9 @@ $dark-gray: #292E36; // для секции с чёрным фоном
         height: 1px;
         background: $gold;
     }
+    &::before{
+        margin-bottom: 4px;
+    }
 }
 
 %section-title {
@@ -163,3 +166,4 @@ $dark-gray: #292E36; // для секции с чёрным фоном
     margin: 0 auto;
     padding: 0 20px;
 }
+
